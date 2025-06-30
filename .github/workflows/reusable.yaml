@@ -1,0 +1,23 @@
+on:
+  workflow_call:
+    inputs:
+      greeting:
+        description: 'Greeting message'
+        type: string
+        required: true
+        default: 'Hello'
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Say Hello
+        run: echo "${{ inputs.greeting }}, GitHub Actions!"
+
+      - if: ${{ github.event.issue }}
+        run: |
+          echo "An issue was opened with title: ${{ github.event.issue.title }}"
+
