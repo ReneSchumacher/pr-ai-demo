@@ -21,3 +21,8 @@ jobs:
       - if: ${{ github.event.issue }}
         run: |
           echo "An issue was opened with title: ${{ github.event.issue.title }}"
+
+  reuse-say-hello:
+    uses: ./.github/workflows/reusable.yaml
+    with:
+      greeting: 'Welcome'
