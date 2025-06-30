@@ -28,6 +28,9 @@ function calculate(term) {
       case '/':
         console.log(`${num1} ${op} ${num2} = ${num1 / num2}`);
         return;
+      case '%':
+        console.log(`${num1} ${op} ${num2} = ${num1 % num2}`);
+        return;
     }
   }
   console.log(`The term ${term} is invalid!`);
