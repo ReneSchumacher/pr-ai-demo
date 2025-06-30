@@ -21,6 +21,8 @@ jobs:
       - if: ${{ github.event.issue }}
         run: |
           gh issue comment ${{ github.event.issue.number }} -b "Welcome to my repo! Thanks for opening this issue"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
   reuse-say-hello:
     uses: ./.github/workflows/reusable.yaml
