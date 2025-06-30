@@ -1,3 +1,5 @@
+name: REUSABLE - Standard greeting job
+
 on:
   workflow_call:
     inputs:
