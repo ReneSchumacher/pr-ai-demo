@@ -20,7 +20,7 @@ jobs:
 
       - if: ${{ github.event.issue }}
         run: |
-          echo "An issue was opened with title: ${{ github.event.issue.title }}"
+          gh issue comment ${{ github.event.issue.number }} -b "Welcome to my repo! Thanks for opening this issue"
 
   reuse-say-hello:
     uses: ./.github/workflows/reusable.yaml
