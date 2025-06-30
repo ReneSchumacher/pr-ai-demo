@@ -8,7 +8,7 @@ const terms = [
 
 // Regular expression for evaluting a term in the form <number> <operator> <number>.
 // The expression works with positive and negative numbers (e.g., '-3 + 5').
-const termRegExp = /^\s*(?<num1>\d+)\s*(?<operato>(\+|-|\*|\/))\s*(?<num2>\d+)\s*$/;
+const termRegExp = /^\s*(?<num1>\d+)\s*(?<operato>(\+|-|\*|\/|%))\s*(?<num2>\d+)\s*$/;
 
 function calculate(term) {
   if ((matches = termRegExp.exec(term)) !== null) {
